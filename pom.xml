@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>bankier.dropwizard.kotlin</groupId>
+    <artifactId>dropwizard-kotlin-hello</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+
+    <properties>
+        <kotlin.version>1.1.4-2</kotlin.version>
+        <dropwizard.version>1.1.2</dropwizard.version>
+    </properties>
+
+    <build>
+        <sourceDirectory>source/main/kotlin</sourceDirectory>
+        <plugins>
+            <plugin>
+                <groupId>io.repaint.maven</groupId>
+                <artifactId>tiles-maven-plugin</artifactId>
+                <version>2.10</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <tiles>
+                        <tile>maven.tiles:maven-dependency-tile:1.0-SNAPSHOT</tile>
+                        <tile>maven.tiles:maven-ktlint-tile:1.0-SNAPSHOT</tile>
+                        <tile>maven.tiles:maven-kotlin-compiler-tile:1.0-SNAPSHOT</tile>
+                        <tile>maven.tiles:maven-shade-tile:1.0-SNAPSHOT</tile>
+                    </tiles>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>io.dropwizard</groupId>
+            <artifactId>dropwizard-core</artifactId>
+            <version>${dropwizard.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>21.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.8.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.dropwizard.metrics</groupId>
+            <artifactId>metrics-healthchecks</artifactId>
+            <version>3.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.dropwizard</groupId>
+            <artifactId>dropwizard-jersey</artifactId>
+            <version>1.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib</artifactId>
+            <version>1.1.4-2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>5.3.4.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.ws.rs</groupId>
+            <artifactId>javax.ws.rs-api</artifactId>
+            <version>2.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>io.dropwizard.metrics</groupId>
+            <artifactId>metrics-annotation</artifactId>
+            <version>3.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>13.0</version>
+        </dependency>
+
+        <!--IN DEVELOPMENT-->
+        <!--<dependency>-->
+        <!--<groupId>io.federecio</groupId>-->
+        <!--<artifactId>dropwizard-swagger</artifactId>-->
+        <!--<version>0.7.0</version>-->
+        <!--</dependency>-->
+    </dependencies>
+</project>

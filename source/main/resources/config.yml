@@ -1,0 +1,5 @@
+template: Hello, %s!
+defaultName: Stranger
+
+################################### IN DEVELOPMENT ###########################################################
+#swagger: resourcePackage: <a comma separated string of the packages that contain your @Api annotated resources>
